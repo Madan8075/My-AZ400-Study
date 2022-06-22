@@ -1,0 +1,7 @@
+#!/bin/bash
+MEG="$i"
+if ! grep -qE "fixed" "$MSG"; then
+cat "$MSG"
+echo "Your commit message must contain 'fixed' work"
+exit 1
+fi
